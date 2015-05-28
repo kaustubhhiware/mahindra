@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+
+<sdf version="1.4">
+<model name="tyre">
+
+<link name="wall">
+<pose>0 0 0 0 0 0</pose>
+ <collision name="collision">
+         <geometry>
+           <box>
+            <size>0.01 0.01 0.75</size>
+	   </box>
+         </geometry>
+    </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.01 0.01 0.75</size>
+	   </box>
+        </geometry>
+</visual>
+
+
+</link>
+<link name="steer">
+<pose>0.1929 0 0.5299866 0 -0.3490658 0</pose>
+<collision name="collision">
+         <geometry>
+           <cylinder>
+             <radius>0.015</radius>
+             <length>0.56401</length>
+           </cylinder>
+         </geometry>
+    </collision>
+      <visual name="visual">
+        <geometry>
+          <cylinder>
+            <radius>0.015</radius>
+            <length>0.56401</length>
+          </cylinder>
+        </geometry>
+</visual>
+</link>
+<joint type="revolute" name="r0d1_hinge">
+        <pose>0 0 0.75 0 0 0</pose>
+        <child>steer</child>
+        <parent>wall</parent>
+        <axis>
+          <xyz>-0.3422 0 0.939644</xyz>
+        </axis>
+      </joint>
+
+<!--
+<link name="wheel">
+ <pose>0.1929 0 0.22 -1.5707963267948966 0 0</pose>
+  <collision name="collision">
+         <geometry>
+           <cylinder>
+             <radius>0.22</radius>
+             <length>0.1</length>
+           </cylinder>
+         </geometry>
+    </collision>
+      <visual name="visual">
+        <geometry>
+          <cylinder>
+            <radius>0.22</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+</visual>
+</link>
+
+-->
+
+<!--
+<link name="rod_1">
+ <pose>0.14774 0.05 0.12404 0 0 0</pose>
+  <collision name="collision">
+         <geometry>
+           <cylinder>
+             <radius>0.015</radius>
+             <length>0.26401</length>
+           </cylinder>
+         </geometry>
+    </collision>
+      <visual name="visual">
+        <geometry>
+          <cylinder>
+            <radius>0.015</radius>
+            <length>0.26401</length>
+          </cylinder>
+        </geometry>
+</visual>
+</link>
+<joint type="revolute" name="r0d1_hinge">
+        <pose>0.1929 0 0.22 0 0 0</pose>
+        <child>wheel</child>
+        <parent>rod1</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+        </axis>
+      </joint>
+
+<link name="rod_2">
+ <pose>0.14774 -0.05 0.12404 0 0 0</pose>
+  <collision name="collision">
+         <geometry>
+           <cylinder>
+             <radius>0.015</radius>
+             <length>0.26401</length>
+           </cylinder>
+         </geometry>
+    </collision>
+      <visual name="visual">
+        <geometry>
+          <cylinder>
+            <radius>0.015</radius>
+            <length>0.26401</length>
+          </cylinder>
+        </geometry>
+</visual>
+</link>
+<joint type="revolute" name="r0d2_hinge">
+        <pose>0.1929 0 0.22 0 0 0</pose>
+        <child>wheel</child>
+        <parent>rod2</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+        </axis>
+      </joint>
+
+-->
+</model>
+</sdf>

@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name="yellow_parking_block">
+    <static>true</static>
+    <link name="link">
+      <visual name="visual">
+		    <pose>0 0 0 0 0 -1.57079632679</pose>
+        <geometry>
+          <mesh>
+            <uri>model://drc_practice_yellow_parking_block/meshes/block.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://drc_practice_yellow_parking_block/meshes/block.dae</uri>
+				<scale>100.0 100.0 100.0</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>
